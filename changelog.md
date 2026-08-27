@@ -13,4 +13,4 @@ All notable changes to this project will be documented in this file.
 - Added changelog file
 - Added comments
 - Updated plugin URI
-
+- Add 'Choose Sender Email' Section to WP Settings Page
