@@ -18,18 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 
 /****************************************************************************************/
 
-/* Change default from email address */
-add_filter( 'wp_mail_from', function( $original_email_address ) {
-    return 'webhost@happyearth.dev';
-});
-
-/* Change default from name */
-add_filter( 'wp_mail_from_name', function( $original_email_from ) {
-    return 'Happy Earth Development';
-});
-
-/****************************************************************************************/
-
 /* Add 'Choose Sender Email' Section to WP Settings Page */
 function cbj_add_choose_sender_email_section() {
 
@@ -134,4 +122,17 @@ function cbj_register_sender_settings() {
 
 } add_action( 'admin_init', 'cbj_register_sender_settings' );
 
+/****************************************************************************************/
+
+/* Change default from email address */
+add_filter( 'wp_mail_from', function( $original_email_address ) {
+    $value = get_option('sender_email', '');
+    return esc_attr($value);
+});
+
+/* Change default from name */
+add_filter( 'wp_mail_from_name', function( $original_email_from ) {
+    $value = get_option('sender_name', '');
+    return esc_attr($value);
+});
 
