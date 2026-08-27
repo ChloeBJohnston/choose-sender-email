@@ -14,3 +14,5 @@ All notable changes to this project will be documented in this file.
 - Added comments
 - Updated plugin URI
 - Add 'Choose Sender Email' Section to WP Settings Page
+- Add sender_email and sender_name settings to 'Choose Sender Email' Section of WP Settings Page
+
