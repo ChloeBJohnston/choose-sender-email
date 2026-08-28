@@ -125,13 +125,13 @@ function cbj_register_sender_settings() {
 /****************************************************************************************/
 
 /* Change default from email address */
-add_filter( 'wp_mail_from', function( $original_email_address ) {
+add_filter( 'wp_mail_from', function( $original_email_address ) {       // https://developer.wordpress.org/reference/hooks/wp_mail_from/
     $value = get_option('sender_email', '');
     return esc_attr($value);
 });
 
 /* Change default from name */
-add_filter( 'wp_mail_from_name', function( $original_email_from ) {
+add_filter( 'wp_mail_from_name', function( $original_email_from ) {         // https://developer.wordpress.org/reference/hooks/wp_mail_from_name/
     $value = get_option('sender_name', '');
     return esc_attr($value);
 });
