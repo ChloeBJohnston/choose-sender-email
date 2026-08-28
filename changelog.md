@@ -16,3 +16,6 @@ All notable changes to this project will be documented in this file.
 - Add 'Choose Sender Email' Section to WP Settings Page
 - Add sender_email and sender_name settings to 'Choose Sender Email' Section of WP Settings Page
 - Updated filters to use sender_email and sender_name options when sending system mail
+
+### 2026-08-28
+- Updated version number to 1.1.0
